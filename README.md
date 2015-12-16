@@ -146,18 +146,6 @@
 }
 ```
 
-### 获取 AP Client IP 信息
-
-`GET /api/wan/get_info/apclient?deviceAlias=` // 2g, 5g
-```js
-{
-  "ip"              : "192.168.1.12",
-  "mask"            : "255.255.255.0",
-  "gateway"         : "182.168.1.1"",
-}
-```
-
-
 ### 设置 WAN 口连接方式
 
 `POST /api/wan/set_config`
@@ -203,26 +191,6 @@ return data:
   "code"    : 0    // 检测外网是否可以连接到互联网 (0, 正常连接互联网; 1, 不能正常连接; 
                                                     2, 解析域名失败; 3, 网路状况不佳, 比如下载导致的)
   "msg"     : "error message"   // 错误消息, 如果有的话.
-}
-```
-
-### 获取 WAN 口上下行流量信息
-
-`GET /api/wan/get_traffics`
-
-```js
-{
-  "up"          : number,               // 取得自系统启动以来，上行数据的总量(单位字节）
-  "up_str"      : "number",             // up 值的字符串形式 例如: "12345678"
-  "down"        : number                // 取得自系统启动依赖，下行数据的总量（单位字节）
-  "down_str"    : "number"              // down 值的字符串形式 例如: "12345678"
-  "code"        : 0,                    // 成功
-  "tx_rate"     : 0,                    // 发丢包率
-  "rx_dropped"  : 0,                    // 收丢包
-  "rx_packets"  : 270649,               // 收包
-  "tx_packets"  : 282499,               // 发包
-  "rx_rate"     : 0,                    // 收丢包率
-  "tx_dropped"  : 0                     // 发丢包
 }
 ```
 
