@@ -315,7 +315,7 @@ return:
                                           // 9: 11BGN mixed
 
       "band_width_mode"   : 1,            // 频道带宽(0~自动，1~20HZ，2~40HZ) 
-      "txpower"           : 0,                      // (0~1mw,4~2mw,7~5mw,10~10mw,13~13mw,16~39mw,19~79mw,20~100mw,22~158mw)
+      "txpower"           : 0,            // (0~1mw,4~2mw,7~5mw,10~10mw,13~13mw,16~39mw,19~79mw,20~100mw,22~158mw)
       "beacon"            : 40,           // Beacon时槽 (20~1024)
       "apsd_enabled"      : true,         // APSD开关 (true|false)
       "ap_enabled"        : true,         // AP隔离开关 (true|false)
