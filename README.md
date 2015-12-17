@@ -238,7 +238,8 @@ return:
       "power"             : 20,                     // 无线信号功率	TXPower
       "channel"           : 6,                      // 信道 Channel
       "net_type"          : 9,                      // 网络模式 WirelessMode (0,1,4,6,9,)
-      "band_width_mode"   : 1,                      // 频道带宽 HT_BW (0|1)
+      "band_width_mode"   : 0,                      // 频道带宽 (0~自动，1~20HZ，2~40HZ) 
+      "txpower"           : 0,                      // (0~1mw,4~2mw,7~5mw,10~10mw,13~13mw,16~39mw,19~79mw,20~100mw,22~158mw)
       "mac"               : "28-2c-b2-97-82-39",    // mac地址 命令行ifconfig
       "beacon"            : 40,                     // Beacon时槽 BeaconPeriod (20~1024)
       "apsd_enabled"      : true,                   // APSD开关 APSDCapable
@@ -257,7 +258,7 @@ return:
       "power"             : 20,                     // 无线信号功率
       "channel"           : 14,                     // 信道
       "net_type"          : 14,                     // 网络模式 (2,8,14,15)
-      "band_width_mode"   : 1,                      // 频道带宽 (0|1)
+      "band_width_mode"   : 0,                      // 频道带宽 (0~自动，1~20HZ，2~40HZ，3~80HZ)
       "mac"               : "28-2c-b2-97-82-39",    // MAC 地址
       "beacon"            : 40,                     // Beacon 时槽
       "apsd_enabled"      : true,                   // APSD 开关
@@ -313,7 +314,8 @@ return:
                                           // 6: 11N only
                                           // 9: 11BGN mixed
 
-      "band_width_mode"   : 1,            // 频道带宽(20Mhz->0, 20Mhz/40Mhz->1,强制40Mhz->2)
+      "band_width_mode"   : 1,            // 频道带宽(0~自动，1~20HZ，2~40HZ) 
+      "txpower"           : 0,                      // (0~1mw,4~2mw,7~5mw,10~10mw,13~13mw,16~39mw,19~79mw,20~100mw,22~158mw)
       "beacon"            : 40,           // Beacon时槽 (20~1024)
       "apsd_enabled"      : true,         // APSD开关 (true|false)
       "ap_enabled"        : true,         // AP隔离开关 (true|false)
@@ -355,7 +357,7 @@ return:
                                           // 14: 11A/AN/AC mixed 5G band only
                                           // 15: 11 AN/AC mixed 5G band only
 
-      "band_width_mode"   : 1,            // 频道带宽 (0|1)
+      "band_width_mode"   : 0,            // 频道带宽 (0~自动，1~20HZ，2~40HZ，3~80HZ)
       "beacon"            : 40,           // Beacon时槽
       "apsd_enabled"      : true,         // APSD开关
       "ap_enabled"        : true,         // AP隔离开关
