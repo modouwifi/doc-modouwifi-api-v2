@@ -19,25 +19,65 @@
 ```
 ### 初始化向导设置
 
-###检测wan口网线是否插入
-`GET /api/wan/wan_port_status`
+###检测wan口网线是否插入(无需鉴权)
+`GET /api/guide/wan/check_wan_port_line_status`
 
 ```js
 {
-   "code"         :  0,   // 0为成功执行，其他为失败
-  "connected"     : true  //  true：网线插入， false：未插入
+   "code"          :  0,   //  0为成功执行，其他为失败
+  	"connected"    : true  //  true：网线插入， false：未插入
 }
 ```
 
-###检测wan口上网方式
-`GET /api/wan/wan_port_status`
+###检测wan口上网方式(无需鉴权)
+`GET /api/guide/wan/check_internet_type`
 
 ```js
 {
-   "code"         :  0,     // 0为成功执行，其他为失败
-   "mode"     : 1           //  1：pppoe
-                            //    2:dhcp
-                            //   3:static
+   "code"        : 0,      //  0为成功执行，其他为失败
+   "mode"     	: 1       //  1：pppoe
+                           //  2:dhcp
+                           //  3:static
+}
+```
+
+###快速设置无线名称和上网密码(无需鉴权)
+`POST /api/guide/wifi/base_info_set`
+
+post data
+
+```js
+{
+  "ssid" : "your ssid", // 无线名称
+  "password" : "your password" // 无线密码
+}
+``` 
+response
+
+```js
+{
+   "code"        : 0,      //  0为成功执行，其他为失败
+   "msg"     	: ""       // code非0时显示错误信息
+}
+```
+
+###快速设置管理密码(无需鉴权)
+`POST /api/guide/admin/admin_password_set`
+
+post data
+
+```js
+{
+  "password" : "your password" // 管理密码
+}
+``` 
+
+response
+
+```js
+{
+   "code"        : 0,      //  0为成功执行，其他为失败
+   "msg"     	: ""       // code非0时显示错误信息
 }
 ```
 
