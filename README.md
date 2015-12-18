@@ -68,7 +68,7 @@
 {
   "type"              : "STATIC",              // IP 地址获取的方式(DHCP, PPPOE, STATIC)
   "connect_type"      : "STATIC",              // 连接方式(DHCP, PPPOE, STATIC, AP_CLIENT)
-  "ip"                : "192.168.1.12",
+  "ip"                : "192.168.1.13",
   "mask"              : "182.168.1.1",
   "gateway"           : "255.255.255.0",
   "dns1"              : "8.8.8.8",
