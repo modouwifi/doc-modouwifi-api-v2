@@ -288,7 +288,7 @@ return:
                                           // (NONE<>Disable,   TKIP<>WPA(2)PSK,
                                           // AES<>WPA(2)PSK ,   TKIPAES<>WPA(2)PSK)
       "password"          : "12345678",   // 密码(长度8-64字符) (any string)
-      "power"             : 20,           // 无线信号功率 (100,90,60,30,15,0)
+      "power"             : 20,           // 无线信号功率(0~1mw,4~2mw,7~5mw,10~10mw,13~13mw,16~39mw,19~79mw,20~100mw,22~158mw)
       "channel"           : 0,            // 哪个信道 (0)
                                           // {'name': '自动选择', 'value': 0},
                                           // {'name': '2412MHz (Channel 1)', 'value': 1},
@@ -314,7 +314,6 @@ return:
                                           // 9: 11BGN mixed
 
       "band_width_mode"   : 1,            // 频道带宽(0~自动，1~20HZ，2~40HZ) 
-      "txpower"           : 0,            // (0~1mw,4~2mw,7~5mw,10~10mw,13~13mw,16~39mw,19~79mw,20~100mw,22~158mw)
       "beacon"            : 40,           // Beacon时槽 (20~1024)
       "apsd_enabled"      : true,         // APSD开关 (true|false)
       "ap_enabled"        : true,         // AP隔离开关 (true|false)
