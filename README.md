@@ -17,6 +17,29 @@
   "msg"     : "hello"             // 可能存在的出错消息
 }
 ```
+### 初始化向导设置
+
+###检测wan口网线是否插入
+`GET /api/wan/wan_port_status`
+
+```js
+{
+   "code"         :  0,   // 0为成功执行，其他为失败
+  "connected"     : true  //  true：网线插入， false：未插入
+}
+```
+
+###检测wan口上网方式
+`GET /api/wan/wan_port_status`
+
+```js
+{
+   "code"         :  0,     // 0为成功执行，其他为失败
+   "mode"     : 1           //  1：pppoe
+                            //    2:dhcp
+                            //   3:static
+}
+```
 
 ## 登录
 
