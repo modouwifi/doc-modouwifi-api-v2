@@ -235,11 +235,10 @@ return:
       "security_mode"     : "WPAPSKWPA2PSK",        // Security Mode
       "encrypt"           : "TKIP",                 // WPA Algorithms(TKIP,AES ,TKIPAES)  EncrypType
       "password"          : "12345678",             // 密码 AuthMode（长度8-64字符）
-      "power"             : 20,                     // 无线信号功率	TXPower
+      "power"             : 20,                     // 无线信号功率	TXPower(0~1mw,4~2mw,7~5mw,10~10mw,13~13mw,16~39mw,19~79mw,20~100mw,22~158mw)
       "channel"           : 6,                      // 信道 Channel
       "net_type"          : 9,                      // 网络模式 WirelessMode (0,1,4,6,9,)
-      "band_width_mode"   : 0,                      // 频道带宽 (0~自动，1~20HZ，2~40HZ) 
-      "txpower"           : 0,                      // (0~1mw,4~2mw,7~5mw,10~10mw,13~13mw,16~39mw,19~79mw,20~100mw,22~158mw)
+      "band_width_mode"   : 0,                      // 频道带宽 (0~自动，1~20HZ，2~40HZ)
       "mac"               : "28-2c-b2-97-82-39",    // mac地址 命令行ifconfig
       "beacon"            : 40,                     // Beacon时槽 BeaconPeriod (20~1024)
       "apsd_enabled"      : true,                   // APSD开关 APSDCapable
