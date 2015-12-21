@@ -237,6 +237,41 @@ post data:
   "macCloneMac"           : "40:6c:8f:2d:6c:3b"   // MAC CLONE mac
 }
 ```
+`备注`
+PPPOE提交参数:
+
+```js
+{
+"connect_type"          : "PPPOE",             // 连接方式(DHCP, PPPOE, STATIC, AP_CLIENT)
+"type"                  : "PPPOE",             // IP 地址获取的方式(DHCP, PPPOE, STATIC)
+"account"               : "account",            // 如果当前是PPPOE
+"password"              : "password",           // 如果当前是PPPOE
+}
+```
+
+DHCP提交参数:
+
+```js
+{
+"connect_type"          : "DHCP",             // 连接方式(DHCP, PPPOE, STATIC, AP_CLIENT)
+"type"                  : "DHCP",             // IP 地址获取的方式(DHCP, PPPOE, STATIC)
+}
+```
+
+STATIC提交参数:
+
+```js
+{
+"connect_type"          : "STATIC",             // 连接方式(DHCP, PPPOE, STATIC, AP_CLIENT)
+"type"                  : "STATIC",             // IP 地址获取的方式(DHCP, PPPOE, STATIC)
+"ip"                    : "192.168.1.12",
+"mask"                  : "255.255.255.0",
+"gateway"               : "192.168.1.1",
+"dns1"                  : "8.8.8.8",
+"dns2"                  : "8.8.4.4",
+"mtu"                   : 2,
+}
+```
 
 return data:
 
