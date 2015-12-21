@@ -43,6 +43,42 @@
 }
 ```
 
+### 设置 WAN 口连接方式(无需鉴权)
+
+`POST /api/guide/wan/set_config`
+
+post data:
+
+```js
+{
+  "type"                  : "STATIC",             // IP 地址获取的方式(DHCP, PPPOE, STATIC)
+  "connect_type"          : "STATIC",             // 连接方式(DHCP, PPPOE, STATIC, AP_CLIENT)
+  "ip"                    : "192.168.1.12",
+  "mask"                  : "255.255.255.0",
+  "gateway"               : "192.168.1.1",
+  "dns1"                  : "8.8.8.8",
+  "dns2"                  : "8.8.4.4",
+  "mtu"                   : "2",
+  "stp"                   : true,
+  "account"               : "account",            // 如果当前是PPPOE
+  "password"              : "password",           // 如果当前是PPPOE
+  "pppoe_method"          : "KeepAlive",          // 连接模式(KeepAlive, OnDemand, Manual)
+  "pedial_period"         : 60,                   // 连接断开xx秒后尝试重拨,单位(秒) 当前KeepAlive
+  "idle_time"             : 5,                    // 无流量时xx分钟后断开,单位(分) 当前OnDemand
+  "macCloneEnabled"       : true,                 // 是否开启 Macclone
+  "macCloneMac"           : "40:6c:8f:2d:6c:3b"   // MAC CLONE mac
+}
+```
+
+return data:
+
+```js
+{
+  "code"  : 0,          // (0->设置成功，1-> 正在设置，-1 ->已有全局设置锁)
+  "msg"   : "xx"
+}
+```
+
 ###快速设置无线名称和上网密码(无需鉴权)
 `POST /api/guide/wifi/base_info_set`
 
