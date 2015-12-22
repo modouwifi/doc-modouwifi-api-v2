@@ -29,6 +29,15 @@
    "connected"    : true  //  true：网线插入， false：未插入
 }
 ```
+###检测互联网连通状态(无需鉴权)
+`GET /api/guide/wan/is_internet_available`
+
+```js
+{
+   "code"        : 0,    // 检测外网是否可以连接到互联网  0, 正常连接互联网;  1, 不能正常连接; 2, 解析域名失败; 3, 网路状况不佳, 比如下载导致的)
+   "msg"         : "",   // 执行失败时的返回错误原因
+}
+```
 
 ###检测wan口上网方式(无需鉴权)
 `GET /api/guide/wan/check_internet_type`
