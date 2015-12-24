@@ -29,6 +29,15 @@
    "connected"    : true  //  true：网线插入， false：未插入
 }
 ```
+###检测互联网连通状态(无需鉴权)
+`GET /api/guide/wan/is_internet_available`
+
+```js
+{
+   "code"        : 0,    // 检测外网是否可以连接到互联网  0, 正常连接互联网;  1, 不能正常连接; 2, 解析域名失败; 3, 网路状况不佳, 比如下载导致的)
+   "msg"         : "",   // 执行失败时的返回错误原因
+}
+```
 
 ###检测wan口上网方式(无需鉴权)
 `GET /api/guide/wan/check_internet_type`
@@ -271,6 +280,41 @@ post data:
   "idle_time"             : 5,                    // 无流量时xx分钟后断开,单位(分) 当前OnDemand
   "macCloneEnabled"       : true,                 // 是否开启 Macclone
   "macCloneMac"           : "40:6c:8f:2d:6c:3b"   // MAC CLONE mac
+}
+```
+`备注`
+PPPOE提交参数:
+
+```js
+{
+"connect_type"          : "PPPOE",             // 连接方式(DHCP, PPPOE, STATIC, AP_CLIENT)
+"type"                  : "PPPOE",             // IP 地址获取的方式(DHCP, PPPOE, STATIC)
+"account"               : "account",            // 如果当前是PPPOE
+"password"              : "password",           // 如果当前是PPPOE
+}
+```
+
+DHCP提交参数:
+
+```js
+{
+"connect_type"          : "DHCP",             // 连接方式(DHCP, PPPOE, STATIC, AP_CLIENT)
+"type"                  : "DHCP",             // IP 地址获取的方式(DHCP, PPPOE, STATIC)
+}
+```
+
+STATIC提交参数:
+
+```js
+{
+"connect_type"          : "STATIC",             // 连接方式(DHCP, PPPOE, STATIC, AP_CLIENT)
+"type"                  : "STATIC",             // IP 地址获取的方式(DHCP, PPPOE, STATIC)
+"ip"                    : "192.168.1.12",
+"mask"                  : "255.255.255.0",
+"gateway"               : "192.168.1.1",
+"dns1"                  : "8.8.8.8",
+"dns2"                  : "8.8.4.4",
+"mtu"                   : 2,
 }
 ```
 
