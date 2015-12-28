@@ -188,6 +188,25 @@ response
   "flash_remain"              :28,      //flash剩余大小，单位KB
 }
 ```
+
+### 获取lan测主机列表
+`GET /api/devices/devices_all`
+
+```js
+{
+  "code": 0,
+  "devices": [
+    {
+      "hostname"       : "android-a078b707872bc9a",   // 主机名
+      "ip"              : "192.168.1.11",              // ip地址
+      "mac"             : "97:32:21:44:55:11:42",      // mac地址
+      "leaseTime"        : 31223,                       //租约剩余时间单位(s)
+    },...
+  ]
+}
+```
+
+
 ### 恢复出厂设置
 
 `GET /api/system/reset_config`
