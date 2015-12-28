@@ -163,6 +163,19 @@ response
   "msg"           : ""
 }
 ```
+### 获取系统状态信息
+
+`GET /api/system/get_info`
+
+```js
+{
+  "code"          : 0,
+  "name"           : "QCA",
+  "sn"              : "1111111111",
+  "soft_version"    :"1.0",
+  "hard_version"    :"2.0"
+}
+```
 
 ### 恢复出厂设置
 
