@@ -176,7 +176,18 @@ response
   "hard_version"    :"2.0"
 }
 ```
+### 获取内存和闪存信息
 
+`GET /api/devices/ddr2_flash`
+
+```js
+{
+  "ddr2_total_size"          : 64,      //ddr总大小，单位kB
+  "ddr2_remain"               : 28,     //ddr剩余大小，单位kB
+  "flash_total_size"          :64,      //flash总大小，单位kB
+  "flash_remain"              :28,      //flash剩余大小，单位KB
+}
+```
 ### 恢复出厂设置
 
 `GET /api/system/reset_config`
