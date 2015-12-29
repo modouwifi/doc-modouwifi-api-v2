@@ -245,7 +245,8 @@ response
   "password"          : "password",            // 如果当前是PPPOE
   "macCloneEnabled"   : true,                  // 是否开启Macclone
   "macCloneMac"       : "40:6c:8f:2d:6c:3b",   // MAC CLONE mac
-  "uptime"            : "22486"                // 路由器运行时间
+  "uptime"            : "22486",                // 路由器运行时间
+  "mac"               : "00:00:ff:ff:ff:ff"    //wan 口mac
 }
 ```
 
