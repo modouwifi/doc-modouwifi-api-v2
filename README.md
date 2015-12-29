@@ -146,7 +146,7 @@ response
 
 ```js
 {
-  "old_password"          : "matrix,
+  "old_password"          : "matrix“,
   "new_password"           : "matrix123456"
 }
 ```
