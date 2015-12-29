@@ -142,6 +142,19 @@ response
 
 ## 重启
 
+### 修改密码
+
+`post /api/auth/modify_password`
+
+```js
+{
+  "old_password"          : "matrix,
+  "new_password"           : "matrix123456"
+}
+```
+
+## 重启
+
 ### 正常重启
 
 `GET /api/system/reboot`
