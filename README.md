@@ -127,7 +127,56 @@ response
    "msg"     	: ""       // code非0时显示错误信息
 }
 ```
+### 取得 WiFi 的配置信息
 
+`GET /api/guide/wifi/get_config`  (无需鉴权)
+
+```js
+{
+  "2g":
+    {
+      "enabled"           : true,                   // 2.4g开关    RadioOff
+      "ssid"              : "ssid1",                // 名称 SSID1(长度1-32字符)
+      "broadcastssid"     : true,                   // 是否广播SSID
+      "security_mode"     : "WPAPSKWPA2PSK",        // Security Mode
+      "encrypt"           : "TKIP",                 // WPA Algorithms(TKIP,AES ,TKIPAES)  EncrypType
+      "password"          : "12345678",             // 密码 AuthMode（长度8-64字符）
+      "power"             : 20,                     // 无线信号功率	TXPower(0~1mw,4~2mw,7~5mw,10~10mw,13~13mw,16~39mw,19~79mw,20~100mw,22~158mw)
+      "channel"           : 6,                      // 信道 Channel
+      "net_type"          : 9,                      // 网络模式 WirelessMode (0,1,4,6,9,)
+      "band_width_mode"   : 0,                      // 频道带宽 (0~自动，1~20HZ，2~40HZ)
+      "mac"               : "28-2c-b2-97-82-39",    // mac地址 命令行ifconfig
+      "beacon"            : 40,                     // Beacon时槽 BeaconPeriod (20~1024)
+      "apsd_enabled"      : true,                   // APSD开关 APSDCapable
+      "ap_enabled"        : true,                   // AP隔离开关 NoForwarding
+      "shortgi_enabled"   : true,                   // short GI开关 HT_GI
+      "wmm_enabled"       : true                    // 多媒体优先WMM开关 WmmCapable
+    },
+  "5g":
+    {
+      "enabled"           : true,                   // 5g开关
+      "ssid"              : "ssid1",                // 名称
+      "broadcastssid"     : true,                   // 是否广播SSID
+      "security_mode"     : "WPAPSKWPA2PSK"         // Security Mode
+      "encrypt"           : "TKIP",                 // WPA Algorithms(TKIP,AES ,TKIPAES) EncrypType
+      "password"          : "12345678",             // 密码
+      "power"             : 20,                     // 无线信号功率
+      "channel"           : 14,                     // 信道
+      "net_type"          : 14,                     // 网络模式 (2,8,14,15)
+      "band_width_mode"   : 0,                      // 频道带宽 (0~自动，1~20HZ，2~40HZ，3~80HZ)
+      "mac"               : "28-2c-b2-97-82-39",    // MAC 地址
+      "beacon"            : 40,                     // Beacon 时槽
+      "apsd_enabled"      : true,                   // APSD 开关
+      "ap_enabled"        : true,                   // AP隔离开关
+      "shortgi_enabled"   : true,                   // short GI 开关
+      "wmm_enabled"       : true,                   // 多媒体优先WMM开关
+      "same_as_2g"        : true                    // 使用与2.4g相同的设置
+                                                    //（包含：无线名称，加密方式，加密算法，密码，传输功率，
+                                                    // Beacon时槽，APSD，AP隔离，Short GI
+                                                    // 多媒体优先WMM，无线广播）
+    }
+}
+```
 ## 登录
 
 **不需要身份验证**
