@@ -67,7 +67,7 @@ post data:
   "gateway"               : "192.168.1.1",
   "dns1"                  : "8.8.8.8",
   "dns2"                  : "8.8.4.4",
-  "mtu"                   : "2",
+  "mtu"                   : 2,
   "stp"                   : true,
   "account"               : "account",            // 如果当前是PPPOE
   "password"              : "password",           // 如果当前是PPPOE
@@ -238,7 +238,7 @@ response
   "gateway"           : "255.255.255.0",
   "dns1"              : "8.8.8.8",
   "dns2"              : "8.8.4.4",
-  "mtu"               : "1500",
+  "mtu"               : 1500,
   "mtu_negotiable"    : 0,                     // 如果当前是PPPOE，默认为协商模式: 0
   "stp"               : true,
   "account"           : "account",             // 如果当前是PPPOE
