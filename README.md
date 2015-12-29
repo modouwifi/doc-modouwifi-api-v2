@@ -170,6 +170,7 @@ response
 ```js
 {
   "code"          : 0,
+  "cpu_used"       : 8,                   //cpu利用率8%
   "name"           : "QCA",
   "sn"              : "1111111111",
   "soft_version"    :"1.0",
