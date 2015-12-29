@@ -140,8 +140,6 @@ response
 }
 ``` 
 
-## 重启
-
 ### 修改密码
 
 `post /api/auth/modify_password`
