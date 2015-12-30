@@ -274,6 +274,17 @@ response
 
 ## WAN 口设置
 
+###检测wan口网线是否插入
+`GET /api/wan/check_wan_port_line_status`
+
+```js
+{
+   "code"          :  0,   //  0为成功执行，其他为失败
+   "msg"           : "",   // 执行失败时的返回错误原因
+   "connected"    : true  //  true：网线插入， false：未插入
+}
+```
+
 ### 获取当前 WAN 口设置
 
 `GET /api/wan/get_info`
