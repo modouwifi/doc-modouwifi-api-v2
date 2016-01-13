@@ -263,6 +263,14 @@ response
       "ip"              : "192.168.1.11",              // ip地址
       "mac"             : "97:32:21:44:55:11:42",      // mac地址
       "leaseTime"        : 31223,                       //租约剩余时间单位(s)
+                                                        //ip_mode=static时没有此选项
+      "uptime"           : 8888888,                      //客户端上线时间（单位s)
+      "conn_type"        : "wire",               //客户端在那个接口下
+                                                // wire: 有线
+                                                //2G: 2g客户端
+      "ip_mode"          : "static"               //获取IP地址类型
+                                                //static:静态ip
+                                                //dhcp:dhcp客户端
     },...
   ]
 }
