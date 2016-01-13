@@ -268,6 +268,7 @@ response
       "conn_type"        : "wire",               //客户端在那个接口下
                                                 // wire: 有线
                                                 //2G: 2g客户端
+                                                //5G: 5g客户端
       "ip_mode"          : "static"               //获取IP地址类型
                                                 //static:静态ip
                                                 //dhcp:dhcp客户端
