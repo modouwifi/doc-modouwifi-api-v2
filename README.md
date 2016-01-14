@@ -260,11 +260,12 @@ response
   "devices": [
     {
       "hostname"       : "android-a078b707872bc9a",   // 主机名
+                                                        //unknown表示没有得到
       "ip"              : "192.168.1.11",              // ip地址
       "mac"             : "97:32:21:44:55:11:42",      // mac地址
       "leaseTime"        : 31223,                       //租约剩余时间单位(s)
                                                         //ip_mode=static时没有此选项
-      "uptime"           : 8888888,                      //客户端上线时间（单位s)
+      "uptime"           : "8888888",                                   //客户端上线时间（单位s) “0”表示未获取
       "conn_type"        : "wire",               //客户端在那个接口下
                                                 // wire: 有线
                                                 //2G: 2g客户端
