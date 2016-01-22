@@ -223,6 +223,17 @@ response
   "msg"           : ""
 }
 ```
+
+### 系统初始化完成时，请调用此api,否则用户不能上网。
+`GET /api/system/system_init_finished`
+
+```js
+{
+  "code"          : 0,
+  "msg"           : ""
+}
+```
+
 ### 获取系统状态信息
 
 `GET /api/system/get_info`
