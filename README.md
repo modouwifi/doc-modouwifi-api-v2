@@ -289,6 +289,26 @@ response
 }
 ```
 
+### 获取usb设备列表
+`GET /api/devices/usb_devices`
+
+```js
+{
+  "code": 0,
+  "devices": [
+    {
+      "interface"       : "usb3.0",   // 设备挂在那个接口下面：usb3.0 | usb2.0
+       "format"         :"NTFS",     //usb设备格式 
+                                        //NTFS
+                                        //FAT32
+                                        //FAT
+                                        //unknown:未知格式
+      "total_size"     :323233         //单位kB
+      "used_size"     :3233         //单位kB
+    },...
+  ]
+}
+```
 
 ### 恢复出厂设置
 
