@@ -302,6 +302,7 @@ response
                                         //NTFS
                                         //FAT32
                                         //FAT
+                                        //EXFAT
                                         //unknown:未知格式
       "total_size"     :323233         //单位kB
       "used_size"     :3233         //单位kB
