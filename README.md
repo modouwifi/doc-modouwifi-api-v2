@@ -768,4 +768,42 @@ return:
 }
 ```
 
+### 添加设备到wifi黑名单
+`POST /api/devices/wifi_blacklist/add`
 
+```js
+{
+  "mac"					  : "A0:18:28:80:18:65" //设备物理地址
+}
+```
+### 将设备从wifi黑名单移除
+`POST /api/devices/wifi_blacklist/remove`
+
+```js
+{
+  "mac"					  : "A0:18:28:80:18:65" //设备物理地址
+}
+```
+
+### 获取wifi黑名单
+`GET /api/devices/wifi_blacklist/get_list`
+
+```js
+{
+
+  "devList":
+	{
+		"A01828801865":
+			{
+				".name":		"A01828801865",      	//节点名
+				".type":		"device",				//节点类型
+				"host_name":	"chendondeiPhone"		//主机名
+				"mac":			"A0:18:28:80:18:65",	//设备物理地址
+				".anonymous":	false,					//是否匿名节点
+				".index":		0						//节点索引号
+			}
+		...
+	},
+	"code":	0
+}
+```
