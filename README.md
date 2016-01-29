@@ -798,6 +798,13 @@ return:
   "mac"					  : "A0:18:28:80:18:65" //设备物理地址
 }
 ```
+
+return data:
+```js
+{
+  "code":	0	//0表示操作成功，其他表示失败
+}	
+
 ### 将设备从wifi黑名单移除
 `POST /api/devices/wifi_blacklist/remove`
 
@@ -807,25 +814,28 @@ return:
 }
 ```
 
+return data:
+```js
+{
+  "code":	0	//0表示操作成功，其他表示失败
+}
+
 ### 获取wifi黑名单
 `GET /api/devices/wifi_blacklist/get_list`
 
 ```js
 {
-
   "devList":
-	{
-		"A01828801865":
-			{
-				".name":		"A01828801865",      	//节点名
-				".type":		"device",				//节点类型
-				"host_name":	"chendondeiPhone"		//主机名
-				"mac":			"A0:18:28:80:18:65",	//设备物理地址
-				".anonymous":	false,					//是否匿名节点
-				".index":		0						//节点索引号
-			}
+	[
+		{
+			"mac"		:"A0:18:28:80:18:65",
+			"hostName"	:"chendondeiPhone"
+		},
+		{	"mac"		:"7C:C5:37:4D:A9:49",
+			"hostName"	:"ceshi-iPhone4"
+		},
 		...
-	},
-	"code":	0
+	],
+  "code":0 	//0表示操作成功，其他表示失败
 }
 ```
