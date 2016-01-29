@@ -306,10 +306,32 @@ response
                                         //unknown:未知格式
       "total_size"     :323233         //单位kB
       "used_size"     :3233         //单位kB
+      "name"          :"sda1"       //设备名称
     },...
   ]
 }
 ```
+
+### 删除usb设备
+`POST /api/devices/usb_remove_devices`
+
+post data
+
+```js
+{
+  "name" : "sda1" // 设备名为获取usb设备时的name字段
+}
+``` 
+
+response
+
+```js
+{
+   "code"        : 0,      //  0为成功执行，其他为失败
+   "msg"     	: ""       // code非0时显示错误信息
+}
+```
+
 
 ### 恢复出厂设置
 
