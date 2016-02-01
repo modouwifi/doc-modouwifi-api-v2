@@ -1,6 +1,12 @@
 # 魔豆路由器 HTTP API 规格文档
+##目录
+- [基本说明](#basic)
+- [初始化向导设置](#initialize)
+ - [检测wan口网线是否插入(无需鉴权)]() 
+- [登录](#login)
+- [重启](#reboot)
 
-## 基本说明
+### <span id = "basic">基本说明：</span>
 
 - 系统操作处于锁的状态下返回 code=－1
 - 身份鉴权基于 cookies
@@ -17,7 +23,8 @@
   "msg"     : "hello"             // 可能存在的出错消息
 }
 ```
-### 初始化向导设置
+
+### <span id = "initialize">初始化向导设置</span>
 
 ###检测wan口网线是否插入(无需鉴权)
 `GET /api/guide/wan/check_wan_port_line_status`
@@ -177,7 +184,8 @@ response
     }
 }
 ```
-## 登录
+
+## <span id = "login">登录</span>
 
 **不需要身份验证**
 
@@ -200,7 +208,7 @@ response
 }
 ```
 
-## 重启
+## <span id = "reboot">重启</span>
 
 ### 正常重启
 
@@ -839,3 +847,5 @@ return data:
   "code":0 	//0表示操作成功，其他表示失败
 }
 ```
+
+
