@@ -800,11 +800,12 @@ return:
 ```
 
 return data:
+
 ```js
 {
   "code":	0	//0表示操作成功，其他表示失败
 }	
-
+```
 ### 将设备从wifi黑名单移除
 `POST /api/devices/wifi_blacklist/remove`
 
@@ -815,11 +816,12 @@ return data:
 ```
 
 return data:
+
 ```js
 {
   "code":	0	//0表示操作成功，其他表示失败
 }
-
+```
 ### 获取wifi黑名单
 `GET /api/devices/wifi_blacklist/get_list`
 
