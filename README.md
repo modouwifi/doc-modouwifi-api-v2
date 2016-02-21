@@ -340,6 +340,49 @@ response
 }
 ```
 
+### 添加共享
+`POST /api/devices/share_add`
+
+post data
+
+```js
+{
+  "name" : "share_test" // 此选项为在电脑中看到的共享目录名字 
+                        //注意，此为共享的关键字
+                        //现阶段如果和已有的相同，那么最新的会生效，会覆盖掉原来的
+  "path" : "/mnt/sda1/work" //要共享的文件路径                        
+}
+``` 
+
+response
+
+```js
+{
+   "code"        : 0,      //  0为成功执行，其他为失败
+   "msg"     	: ""       // code非0时显示错误信息
+}
+```
+### 删除共享
+`POST /api/devices/share_delete`
+
+post data
+
+```js
+{
+  "name" : "share_test" // 此选项为在电脑中看到的共享目录名字 
+                      
+}
+``` 
+
+response
+
+```js
+{
+   "code"        : 0,      //  0为成功执行，其他为失败  
+                            // 1 不存在
+   "msg"     	: ""       // code非0时显示错误信息
+}
+```
 
 ### 恢复出厂设置
 
