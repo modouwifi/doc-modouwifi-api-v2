@@ -896,4 +896,9 @@ return data:
 }
 ```
 
+### web端手动固件升级
+`POST /api/system/manual_upgrade`
+
+formdata contains: filename, filesize(bytes), and the rom file xxx.img.
+
 
