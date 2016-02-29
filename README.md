@@ -315,6 +315,7 @@ response
       "total_size"     :323233         //单位kB
       "used_size"     :3233         //单位kB
       "name"          :"sda1"       //设备名称
+      "label"         :"movie"      //设备卷标
     },...
   ]
 }
