@@ -312,10 +312,13 @@ response
                                         //FAT
                                         //EXFAT
                                         //unknown:未知格式
-      "total_size"     :323233         //单位kB
+      "total_size"     :323233         //单位kB  
+                                        // 0 获取失败
       "used_size"     :3233         //单位kB
+                                    // 0 获取失败
       "name"          :"sda1"       //设备名称
       "label"         :"movie"      //设备卷标
+                                    //unknown    没有得到卷标
     },...
   ]
 }
