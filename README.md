@@ -452,6 +452,7 @@ response
   "dns2"    : "8.8.4.4",
   "mtu"     : 2,
   "stp"     : true
+  "dhcp_advanced_enabled"   : true,                  // 是否开启dhcp高级设置
 }
 ```
 
@@ -475,6 +476,7 @@ response
                                       // 5: 密码已过期;
                                       // 6: 帐户没有远程访问权限;
                                       // 7: 未知错误.
+  "pppoe_advanced_enabled"   : true,                  // 是否开启pppoe高级设置
 }
 ```
 
@@ -491,6 +493,7 @@ response
   "dns2"            : "8.8.4.4",
   "mtu"             : 2,
   "stp"             : true
+"static_advanced_enabled"   : true,                  // 是否开启static高级设置
 }
 ```
 
@@ -529,6 +532,7 @@ PPPOE提交参数:
 "type"                  : "PPPOE",             // IP 地址获取的方式(DHCP, PPPOE, STATIC)
 "account"               : "account",            // 如果当前是PPPOE
 "password"              : "password",           // 如果当前是PPPOE
+  "pppoe_advanced_enabled"   : true,                  // 是否开启pppoe高级设置
 }
 ```
 
@@ -538,6 +542,7 @@ DHCP提交参数:
 {
 "connect_type"          : "DHCP",             // 连接方式(DHCP, PPPOE, STATIC, AP_CLIENT)
 "type"                  : "DHCP",             // IP 地址获取的方式(DHCP, PPPOE, STATIC)
+"dhcp_advanced_enabled"   : true,                  // 是否开启dhcp高级设置
 }
 ```
 
@@ -553,6 +558,7 @@ STATIC提交参数:
 "dns1"                  : "8.8.8.8",
 "dns2"                  : "8.8.4.4",
 "mtu"                   : 2,
+  "static_advanced_enabled"   : true,                  // 是否开启static高级设置
 }
 ```
 
