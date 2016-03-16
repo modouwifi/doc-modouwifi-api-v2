@@ -986,4 +986,81 @@ return data:
 
 formdata contains: filename, filesize(bytes), and the rom file xxx.img.
 
+#### 设置设备的速度限制（仅QoS为speedlimit模式时有效）
+`POST /api/qos/set_bandwidth`
 
+post data:
+```js
+{
+    "ip"    : "192.168.18.123",     // 被设置优先级的设备的IP地址
+    "mac"   : "11:22:33:44:55:66",  // 被设置优先级的设备的MAC地址
+    "up"    : 100,					//kbit
+    "down"  : 500					//kbit
+}
+```
+
+return data:
+```js
+{
+    "code"   : 0,                // 0, 成功; 非0失败
+    "msg"    : "Error Message" 
+}
+```
+
+#### 删除设备的速度限制（仅QoS为speedlimit模式时有效）
+`POST /api/qos/rm_bandwidth`
+
+post data:
+```js
+{
+    "ip"    : "192.168.18.123",     // 被设置优先级的设备的IP地址
+    "mac"   : "11:22:33:44:55:66",  // 被设置优先级的设备的MAC地址
+    "up"    : 100,
+    "down"  : 500
+}
+```
+
+return data:
+```js
+{
+    "code"   : 0,                // 0, 成功; 非0失败
+    "msg"    : "Error Message" 
+}
+```
+
+#### 查询网速限制配置（仅QoS为speedlimit模式时有效）
+`GET /api/qos/bandwidth_config`
+
+return data:
+```js
+{ "code" : 0,
+  "conf" : [
+    [
+        {
+            "ip"    : "192.168.18.121",     // 被限制设备的IP
+            "mac"   : "11:22:33:44:55:61",  // 被限制设备的MAC, 可选
+            "up"    : 100,                  // 上行带宽限制,单位 kbps
+            "down"  : 500                   // 下行宽限制,单位 kbps
+        },
+        ......
+    ],
+    [
+        {
+            "ip"    : "192.168.18.121",     // 被限制设备的IP
+            "mac"   : "11:22:33:44:55:61",  // 被限制设备的MAC, 可选
+            "up"    : 100,                  // 上行带宽限制,单位 kbps
+            "down"  : 500                   // 下行宽限制,单位 kbps
+        },
+        ......
+    ],
+    [
+        {
+            "ip"    : "192.168.18.121",     // 被限制设备的IP
+            "mac"   : "11:22:33:44:55:61",  // 被限制设备的MAC, 可选
+            "up"    : 100,                  // 上行带宽限制,单位 kbps
+            "down"  : 500                   // 下行宽限制,单位 kbps
+        },
+        ......
+    ] 
+]}
+```
