@@ -798,7 +798,7 @@ return:
 
 ### 设置 访客WiFi（非阻塞）
 
-`POST /api/wifi/set_config`
+`POST /api/wifi/set_config_guest`
 
 ```js
 {
