@@ -761,6 +761,77 @@ return:
 }
 ```
 
+### 取得 访客WiFi 的配置信息
+
+`GET /api/wifi/get_config_guest`
+
+```js
+{
+    "global":
+    {
+        "live_time"      : 5,                        //访客ssid存在时间
+                                                    //单位分钟
+                                                    //0表示一直存在
+        "isolation_enabled":true                    //是否隔离此网络
+                                                    //true 隔离网络，不能访问内部网，只能上外网
+    },
+  "2g":
+    {
+      "enabled"           : true,                   // 2.4g开关    RadioOff
+      "ssid"              : "ssid1",                // 名称 SSID1(长度1-32字符)
+     
+      "security_mode"     : "WPAPSKWPA2PSK",        // Security Mode
+      "encrypt"           : "TKIP",                 // WPA Algorithms(TKIP,AES ,TKIPAES)  EncrypType
+      "password"          : "12345678"            // 密码 AuthMode（长度8-64字符）
+    },
+  "5g":
+    {
+      "enabled"           : true,                   // 5g开关
+      "ssid"              : "ssid1",                // 名称
+      "security_mode"     : "WPAPSKWPA2PSK"         // Security Mode
+      "encrypt"           : "TKIP",                 // WPA Algorithms(TKIP,AES ,TKIPAES) EncrypType
+      "password"          : "12345678",             // 密码
+      "same_as_2g"        : true                    // 使用与2.4g相同的设置
+    }
+}
+```
+
+### 设置 访客WiFi（非阻塞）
+
+`POST /api/wifi/set_config`
+
+```js
+{
+    "global":
+    {
+        "live_time"      : 5,                        //访客ssid存在时间
+                                                    //单位分钟
+                                                    //0表示一直存在
+        "isolation_enabled":true                    //是否隔离此网络
+                                                                    //true 隔离网络，不能访问内部网，只能上外网
+    },
+  "2g":
+    {
+      "enabled"           : true,                   // 2.4g开关    RadioOff
+      "ssid"              : "ssid1",                // 名称 SSID1(长度1-32字符)
+     
+      "security_mode"     : "WPAPSKWPA2PSK",        // Security Mode
+      "encrypt"           : "TKIP",                 // WPA Algorithms(TKIP,AES ,TKIPAES)  EncrypType
+      "password"          : "12345678"            // 密码 AuthMode（长度8-64字符）
+    },
+  "5g":
+    {
+      "enabled"           : true,                   // 5g开关
+      "ssid"              : "ssid1",                // 名称
+      "security_mode"     : "WPAPSKWPA2PSK"         // Security Mode
+      "encrypt"           : "TKIP",                 // WPA Algorithms(TKIP,AES ,TKIPAES) EncrypType
+      "password"          : "12345678",             // 密码
+      "same_as_2g"        : true                    // 与2.4g相同的设置
+    }
+}
+```
+
+
 `GET /api/wifi/check_set`
 
 ```js
