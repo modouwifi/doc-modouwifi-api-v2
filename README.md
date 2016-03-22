@@ -831,6 +831,45 @@ return:
 }
 ```
 
+### 取得 WiFi功率 的配置信息
+
+`GET /api/wifi/get_config_power_level`
+
+```js
+{
+  "2g":
+    {
+      "power_level"   : 1                      //wifi功率
+                                                     //0 低 1 中 2 高
+    },
+  "5g":
+    {
+      "power_level"   : 1                      //wifi功率
+                                                     //0 低 1 中 2 高
+    }
+}
+```
+
+### 设置 WiFi功率（非阻塞）
+
+`POST /api/wifi/set_config_power_level`
+
+```js
+{
+
+  "2g":
+    {
+        "power_level"   : 1                      //设置wifi功率
+                                                     //0 低 1 中 2 高
+    },
+  "5g":
+    {
+        "power_level"   : 1                      //设置wifi功率
+                                                     //0 低 1 中 2 高
+    }
+}
+```
+
 
 `GET /api/wifi/check_set`
 
