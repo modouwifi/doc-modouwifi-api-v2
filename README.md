@@ -634,6 +634,7 @@ return:
       "ap_enabled"        : true,                   // AP隔离开关 NoForwarding
       "shortgi_enabled"   : true,                   // short GI开关 HT_GI
       "mu_mimo_enabled"   : true,                //mu_mimo开关(true|fales)建议打开
+      "beamforming_enabled"       : true,  //beamforming_enabled开关(true|fales)建议打开
       "wmm_enabled"       : true                    // 多媒体优先WMM开关 WmmCapable
     },
   "5g":
@@ -655,6 +656,7 @@ return:
       "shortgi_enabled"   : true,                   // short GI 开关
       "wmm_enabled"       : true,                   // 多媒体优先WMM开关
      "mu_mimo_enabled"       : true,          //mu_mimo开关(true|fales)建议打开
+     "beamforming_enabled"       : true,  //beamforming_enabled开关(true|fales)建议打开
       "same_as_2g"        : true                    // 使用与2.4g相同的设置
                                                     //（包含：无线名称，加密方式，加密算法，密码，传输功率，
                                                     // Beacon时槽，APSD，AP隔离，Short GI
@@ -711,6 +713,7 @@ return:
       "shortgi_enabled"   : true,         // short GI开关 (true|false)
       "wmm_enabled"       : true,          // 多媒体优先WMM开关 (true|fales)
       "mu_mimo_enabled"       : true          //mu_mimo开关 (true|fales) 建议打开
+      "beamforming_enabled"       : true,  //beamforming_enabled开关(true|fales)建议打开
     },
   "5g":
     {
@@ -754,6 +757,7 @@ return:
       "shortgi_enabled"   : true,         // short GI开关
       "wmm_enabled"       : true,         // 多媒体优先WMM开关
       "mu_mimo_enabled"       : true,        //mu_mimo开关(true|fales)建议打开
+      "beamforming_enabled"       : true,  //beamforming_enabled开关(true|fales)建议打开
       "same_as_2g"        : true          // 使用与2.4g相同的设置（包含：无线名称，加密方式，
                                           // 加密算法，密码，传输功率，Beacon时槽，APSD，AP隔离，
                                           // Short GI，多媒体优先WMM，无线广播）
