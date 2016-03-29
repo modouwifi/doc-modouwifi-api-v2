@@ -150,7 +150,7 @@ response
       "password"          : "12345678",             // 密码 AuthMode（长度8-64字符）
       "power"             : 20,                     // 无线信号功率	TXPower(0~1mw,4~2mw,7~5mw,10~10mw,13~13mw,16~39mw,19~79mw,20~100mw,22~158mw)
       "channel"           : 6,                      // 信道 Channel
-      "net_type"          : 9,                      // 网络模式 WirelessMode (0,1,4,6,9,)
+      "net_type"          : 9,                      // 网络模式 WirelessMode (6,9,)
       "band_width_mode"   : 0,                      // 频道带宽 (0~自动，1~20HZ，2~40HZ)
       "mac"               : "28-2c-b2-97-82-39",    // mac地址 命令行ifconfig
       "beacon"            : 40,                     // Beacon时槽 BeaconPeriod (20~1024)
@@ -626,7 +626,7 @@ return:
       "password"          : "12345678",             // 密码 AuthMode（长度8-64字符）
       "power"             : 20,                     // 无线信号功率	TXPower(0~1mw,4~2mw,7~5mw,10~10mw,13~13mw,16~39mw,19~79mw,20~100mw,22~158mw)
       "channel"           : 6,                      // 信道 Channel
-      "net_type"          : 9,                      // 网络模式 WirelessMode (0,1,4,6,9,)
+      "net_type"          : 9,                      // 网络模式 WirelessMode (6,9,)
       "band_width_mode"   : 0,                      // 频道带宽 (0~自动，1~20HZ，2~40HZ)
       "mac"               : "28-2c-b2-97-82-39",    // mac地址 命令行ifconfig
       "beacon"            : 40,                     // Beacon时槽 BeaconPeriod (20~1024)
@@ -698,12 +698,8 @@ return:
                                           // {'name': '2467MHz (Channel 12)', 'value': 12},
                                           // {'name': '2472MHz (Channel 13)', 'value': 13}
 
-      "net_type"          : 9,            // 网络模式 (0,1,4,6,9,)
-                                          // 2G: 9
-                                          // 0: legacy 11b/g mixed
-                                          // 1: legacy 11B only
-                                          // 4: legacy 11G only
-                                          // 6: 11N only
+      "net_type"          : 9,            // 网络模式 (6,9,)
+                                          // 6: 11N only 强制11n, 11b,11g客户端连接不上
                                           // 9: 11BGN mixed
 
       "band_width_mode"   : 1,            // 频道带宽(0~自动，1~20HZ，2~40HZ) 
