@@ -169,7 +169,7 @@ response
       "password"          : "12345678",             // 密码
       "power"             : 20,                     // 无线信号功率
       "channel"           : 14,                     // 信道
-      "net_type"          : 14,                     // 网络模式 (2,8,14,15)
+      "net_type"          : 14,                     // 网络模式 (14,15)
       "band_width_mode"   : 0,                      // 频道带宽 (0~自动，1~20HZ，2~40HZ，3~80HZ)
       "mac"               : "28-2c-b2-97-82-39",    // MAC 地址
       "beacon"            : 40,                     // Beacon 时槽
@@ -647,7 +647,7 @@ return:
       "password"          : "12345678",             // 密码
       "power"             : 20,                     // 无线信号功率
       "channel"           : 14,                     // 信道
-      "net_type"          : 14,                     // 网络模式 (2,8,14,15)
+      "net_type"          : 14,                     // 网络模式 (14,15)
       "band_width_mode"   : 0,                      // 频道带宽 (0~自动，1~20HZ，2~40HZ，3~80HZ)
       "mac"               : "28-2c-b2-97-82-39",    // MAC 地址
       "beacon"            : 40,                     // Beacon 时槽
@@ -743,12 +743,9 @@ return:
                                           // {'name': '5825MHz (Channel 165)', 'value': 165}
 
 
-      "net_type"          : 14,           // 网络模式 (2,8,14,15)
-                                          // 5G 14
-                                          // 2: legacy 11A only
-                                          // 8: 11AN mixed
+      "net_type"          : 14,           // 网络模式 (14,15)
                                           // 14: 11A/AN/AC mixed 5G band only
-                                          // 15: 11 AN/AC mixed 5G band only
+                                          // 15: 11ac only 强制802.11ac
 
       "band_width_mode"   : 0,            // 频道带宽 (0~自动，1~20HZ，2~40HZ，3~80HZ)
       "beacon"            : 40,           // Beacon时槽
