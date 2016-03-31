@@ -1034,7 +1034,7 @@ return data:
 }	
 ```
 ### 将设备从wifi白名单移除
-`POST /api/devices/wifi_white/remove`
+`POST /api/devices/wifi_whitelist/remove`
 
 ```js
 {
@@ -1086,6 +1086,16 @@ return data:
   "code":	0	//0表示操作成功，其他表示失败
 }
 ```
+
+### 获取wifi接入控制策略
+`GET /api/devices/wifi_acl/get_policy`
+
+```js
+{
+  "policy":n 	 //n值含义见set_policy接口
+}
+```
+
 ### web端手动固件升级
 `POST /api/system/manual_upgrade`
 
