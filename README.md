@@ -1074,8 +1074,8 @@ return data:
 
 ```js
 {
-  "code":n 	//n=0:disalbe ACL check, n=1: whitelist mode, n=2: blacklist mode, n=3: flush ACL list, n=4: suspend current ACL policies. 
-		    //经过测试n=0和n=4实际效果一致，君请随意
+  "policy":n 	//n=0:disalbe ACL check, n=1: whitelist mode, n=2: blacklist mode, n=3: flush ACL list, n=4: suspend current ACL policies. 
+		    	//经过测试n=0和n=4实际效果一致，君请随意
 }
 ```
 
