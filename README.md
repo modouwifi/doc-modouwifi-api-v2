@@ -1017,6 +1017,75 @@ return data:
 }
 ```
 
+### 添加设备到wifi白名单
+`POST /api/devices/wifi_whitelist/add`
+
+```js
+{
+  "mac"					  : "A0:18:28:80:18:65" //设备物理地址
+}
+```
+
+return data:
+
+```js
+{
+  "code":	0	//0表示操作成功，其他表示失败
+}	
+```
+### 将设备从wifi白名单移除
+`POST /api/devices/wifi_white/remove`
+
+```js
+{
+  "mac"					  : "A0:18:28:80:18:65" //设备物理地址
+}
+```
+
+return data:
+
+```js
+{
+  "code":	0	//0表示操作成功，其他表示失败
+}
+```
+### 获取wifi白名单
+`GET /api/devices/wifi_whitelist/get_list`
+
+```js
+{
+  "devList":
+	[
+		{
+			"mac"		:"A0:18:28:80:18:65",
+			"hostName"	:"chendondeiPhone"
+		},
+		{	"mac"		:"7C:C5:37:4D:A9:49",
+			"hostName"	:"ceshi-iPhone4"
+		},
+		...
+	],
+  "code":0 	//0表示操作成功，其他表示失败
+}
+```
+
+### 设置wifi接入控制策略
+`POST /api/devices/wifi_acl/set_policy`
+
+```js
+{
+  "code":n 	//n=0:disalbe ACL check, n=1: whitelist mode, n=2: blacklist mode, n=3: flush ACL list, n=4: suspend current ACL policies. 
+		    //经过测试n=0和n=4实际效果一致，君请随意
+}
+```
+
+return data:
+
+```js
+{
+  "code":	0	//0表示操作成功，其他表示失败
+}
+```
 ### web端手动固件升级
 `POST /api/system/manual_upgrade`
 
