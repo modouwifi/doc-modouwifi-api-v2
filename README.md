@@ -625,6 +625,8 @@ return:
       "encrypt"           : "TKIP",                 // WPA Algorithms(TKIP,AES ,TKIPAES)  EncrypType
       "password"          : "12345678",             // 密码 AuthMode（长度8-64字符）
       "power"             : 20,                     // 无线信号功率	TXPower(0~1mw,4~2mw,7~5mw,10~10mw,13~13mw,16~39mw,19~79mw,20~100mw,22~158mw)
+      "power_level"   : 1                      //wifi功率
+                                                     //0 低 1 中 2 高
       "channel"           : 6,                      // 信道 Channel
       "net_type"          : 9,                      // 网络模式 WirelessMode (6,9,)
       "band_width_mode"   : 0,                      // 频道带宽 (0~自动，1~20HZ，2~40HZ)
@@ -646,6 +648,8 @@ return:
       "encrypt"           : "TKIP",                 // WPA Algorithms(TKIP,AES ,TKIPAES) EncrypType
       "password"          : "12345678",             // 密码
       "power"             : 20,                     // 无线信号功率
+      "power_level"   : 1                      //wifi功率
+                                                     //0 低 1 中 2 高
       "channel"           : 14,                     // 信道
       "net_type"          : 14,                     // 网络模式 (14,15)
       "band_width_mode"   : 0,                      // 频道带宽 (0~自动，1~20HZ，2~40HZ，3~80HZ)
@@ -682,6 +686,8 @@ return:
                                           // AES<>WPA(2)PSK ,   TKIPAES<>WPA(2)PSK)
       "password"          : "12345678",   // 密码(长度8-64字符) (any string)
       "power"             : 20,           // 无线信号功率(0~1mw,4~2mw,7~5mw,10~10mw,13~13mw,16~39mw,19~79mw,20~100mw,22~158mw)
+      "power_level"   : 1                      //wifi功率
+                                                     //0 低 1 中 2 高
       "channel"           : 0,            // 哪个信道 (0)
                                           // {'name': '自动选择', 'value': 0},
                                           // {'name': '2412MHz (Channel 1)', 'value': 1},
@@ -722,6 +728,8 @@ return:
                                           // AES<>WPA(2)PSK, TKIPAES<>WPA(2)PSK)
       "password"          : "12345678",   // 密码(长度8-64字符)
       "power"             : 20,           // 无线信号功率 (100,90,60,30,15,0)
+       "power_level"   : 1                      //wifi功率
+                                                     //0 低 1 中 2 高
       "channel"           : 0,            // 哪个信道
                                           // {'name': '自动选择', 'value': 0},
                                           // {'name': '5180MHz (Channel 36)', 'value': 36},
@@ -827,46 +835,6 @@ return:
     }
 }
 ```
-
-### 取得 WiFi功率 的配置信息
-
-`GET /api/wifi/get_config_power_level`
-
-```js
-{
-  "2g":
-    {
-      "power_level"   : 1                      //wifi功率
-                                                     //0 低 1 中 2 高
-    },
-  "5g":
-    {
-      "power_level"   : 1                      //wifi功率
-                                                     //0 低 1 中 2 高
-    }
-}
-```
-
-### 设置 WiFi功率（非阻塞）
-
-`POST /api/wifi/set_config_power_level`
-
-```js
-{
-
-  "2g":
-    {
-        "power_level"   : 1                      //设置wifi功率
-                                                     //0 低 1 中 2 高
-    },
-  "5g":
-    {
-        "power_level"   : 1                      //设置wifi功率
-                                                     //0 低 1 中 2 高
-    }
-}
-```
-
 
 `GET /api/wifi/check_set`
 
