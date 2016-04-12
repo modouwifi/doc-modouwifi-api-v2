@@ -278,7 +278,7 @@ response
 
 ```js
 {
-  "code": 0,
+  "code": 0,    //-1，函数失败; 0,成功获取;1,正在获取;99 结果超时
   "devices": [
     {
       "hostname"       : "android-a078b707872bc9a",   // 主机名
