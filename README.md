@@ -1063,7 +1063,8 @@ return data:
 
 ```js
 {
-  "policy":n 	 //n值含义见set_policy接口
+  "code": 0     //0表示操作成功，其他表示失败
+  "policy":n 	//n值含义见set_policy接口
 }
 ```
 
@@ -1072,6 +1073,54 @@ return data:
 
 formdata contains: filename, filesize(bytes), and the rom file xxx.img.
 
+### 在线升级--检测更新
+`GET /api/system/online_upgrade/check_update`
+
+return data:详见OTA接口文档
+
+### 在线升级--开始下载
+`GET /api/system/online_upgrade/start_download`
+
+return data:
+
+```js
+{
+    "code": 0,                    //0表示操作成功，后台已经开始下载，其他表示失败
+    "msg": "操作失败提示信息"   //操作成功时无此项
+}
+```
+
+### 在线升级--检测下载进度
+`GET /api/system/online_upgrade/check_download`
+
+return data:
+```js
+{
+    "code": 0, 
+    "percent":0.18 //下载进度百分比，以两位小数表示，范围: 0.00-1.00
+}
+```
+
+### 在线升级--取消下载
+`GET /api/system/online_upgrade/cancel_download`
+
+return data:
+```js
+{
+    "code": 0
+}
+```
+
+### 在线升级--开始更新
+`GET /api/system/online_upgrade/start_update`
+
+return data:
+```js
+{
+    "code": 0,                   //0表示操作成功，其他表示失败
+    "msg": "操作失败提示信息"   //操作成功时无此项
+}
+```
 #### 设置设备的速度限制（仅QoS为speedlimit模式时有效）
 `POST /api/qos/set_bandwidth`
 
