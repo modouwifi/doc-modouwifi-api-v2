@@ -397,6 +397,15 @@ response
 ### 恢复出厂设置
 
 `GET /api/system/reset_config`
+response
+
+```js
+{
+   "code"        : 0,      //  0为成功执行，其他为失败  
+   "msg"     	: ""       // code非0时显示错误信息
+}
+```
+
 
 ## WAN 口设置
 
