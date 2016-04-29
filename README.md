@@ -1208,3 +1208,37 @@ return data:
     ] 
 ]}
 ```
+
+
+### 获取终端上下行实时速率
+`POST /api/qos/realtime_rate`
+
+postdata:
+```js
+{
+    "clients":
+        [
+            "192.168.18.105",
+            "192.168.18.140",
+            ...
+        ]
+}
+```
+
+return data:
+```js
+{
+    "code": 0
+    "clients":
+        [
+            {
+                "ip":"192.168.18.105",
+                "upload_rate":100,      //unit: bytes/s
+                "download_rate":999
+            }
+            ...
+        ]
+}
+```
+
+
